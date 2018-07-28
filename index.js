@@ -1,12 +1,12 @@
 var spawn = require('child_process').spawn;
-
+var phantomjs = require('phantomjs-prebuilt');
 
 
 function getPageHeight(htmlString, cb) {
-    var args = ['./lib/phantom-script.js', htmlString];
+    var args = [__dirname + '/lib/phantom-script.js', htmlString];
     // In case you want to customize the process, modify the options object
     var options = {};
-    var phantomExecutable = './node_modules/.bin/phantomjs';
+    var phantomExecutable =  phantomjs && phantomjs.path;
     var child = spawn(phantomExecutable, args, options);
 
     // Receive output of the child process
@@ -26,6 +26,6 @@ function getPageHeight(htmlString, cb) {
  */
 function Uint8ArrToString(myUint8Arr){
     return String.fromCharCode.apply(null, myUint8Arr);
-};
+}
 
-exports.getPageHeight = getPageHeight;
+exports = getPageHeight;
