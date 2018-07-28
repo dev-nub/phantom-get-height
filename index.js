@@ -28,4 +28,4 @@ function Uint8ArrToString(myUint8Arr){
     return String.fromCharCode.apply(null, myUint8Arr);
 }
 
-exports = getPageHeight;
+module.exports = getPageHeight;
