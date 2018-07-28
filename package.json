@@ -1,0 +1,17 @@
+{
+  "name": "phantom-get-height",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Soni <lucid.vivek@gmail.com> (http://vivex.me)",
+  "license": "MIT",
+  "dependencies": {
+    "phantom": "^6.0.3"
+  }
+}
